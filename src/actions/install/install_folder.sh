@@ -1,6 +1,18 @@
-# ./iac_fuga install folder
+# install_folder.sh
 #
-# install folders and associated groups to OS
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga install folder
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
+# Install folders and associated groups to OS
 
 install_folder() {
   for i in $( cat "$IAC_FOLDERS" | sed 1d )

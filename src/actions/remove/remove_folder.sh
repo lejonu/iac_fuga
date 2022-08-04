@@ -1,4 +1,18 @@
 
+# remove_folder.sh
+#
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga remove folder
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
 remove_folder() {
   check_user_permission
 

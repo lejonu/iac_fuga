@@ -1,7 +1,18 @@
-#----------------- Add Folder function
+# add_folder.sh
 #
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga add folder
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
 # Add folders associated with groups to $IAC_FOLDERS and optionally to the system
-#
 
 add_folder() {
 
