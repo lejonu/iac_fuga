@@ -1,3 +1,7 @@
 name:owner:group:permission
 teste01:root:GRP_TESTE01:750
 teste02:root:GRP_TESTE02:750
+adm:root:GRP_ADM:770
+ven:root:GRP_VEN:770
+sec:root:GRP_SEC:770
+publico:root:GRP_PUBLICO:777

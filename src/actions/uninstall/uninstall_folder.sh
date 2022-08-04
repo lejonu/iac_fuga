@@ -25,7 +25,7 @@ uninstall_folder() {
  
     $( check_system_folder "${IAC_PATH}${folderName}" ) && {
       echo 
-      echo -n "Are you sure to remove folder ${IAC_PATH}${folderName} and group ${group}?: "
+      echo -n "Are you sure to remove folder ${IAC_PATH}${folderName} and group ${group} ?: "
       echo 
       read confirm
 

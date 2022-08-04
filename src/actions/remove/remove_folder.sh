@@ -31,6 +31,7 @@ remove_folder() {
     delete_registry "$folderName" "$IAC_FOLDERS"
     echo
     echo "Folder '$folderName' has been removed from iac_fuga system."
+    echo
   }
 
   $(! check_system_folder ${IAC_PATH}${folderName}) && {

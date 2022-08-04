@@ -24,15 +24,14 @@
     Usage: iac_fuga ACTION... OPTION...
 
     # Folders:
-
     iac_fuga add folder         # add folder and groups
     iac_fuga remove folder      # remove folder and group
-    iac_fuga install folder     # install folders and groups from iac_fuga in OS
-    iac_fua uninstall folder    # uninstall folders and groups of iac_fuga from OS
+    iac_fuga install            # Install iac_fuga folders, groups and users on the OS
+    iac_fuga uninstall           # uninstall iac_fuga from OS
 
     # Users:
-
     iac_fuga add user           # add user associated to groups
+    iac_fuga remove user        # remove user 
   "
   exit 0
 }
@@ -46,10 +45,11 @@ source ./src/actions/remove/remove_folder.sh        && \
 source ./src/actions/install/install_folder.sh      && \
 source ./src/actions/uninstall/uninstall_folder.sh  && \
 source ./src/actions/add/add_user.sh                && \
-source ./src/actions/remove/remove_user.sh             \
+source ./src/actions/remove/remove_user.sh          && \
+source ./src/actions/import/import_files.sh             \
 || {
   echo
-  echo "Error getting source iac_fuga_lib.sh"
+  echo "Error getting source..."
   echo
   exit 1
 }
@@ -88,29 +88,23 @@ case "$1" in
   ;;
 
   install) 
-    case "$2" in
-      folder)
-        install_folder
-      ;;
-
-    *)
-      echo "Invalid Option"
-      echo "Try ./iac_fuga --help"
-    esac	
-
+  
+    install_folder
+    install_user
+     
   ;;
 
   uninstall) 
-    case "$2" in
-      folder)
-        uninstall_folder
-      ;;
 
-    *)
-      echo "Invalid Option"
-      echo "Try ./iac_fuga --help"
-    esac	
+    uninstall_folder
+    uninstall_user
 
+  ;;
+
+  import) 
+
+    import_files
+     
   ;;
 
   *)
