@@ -33,12 +33,13 @@
 }
 
 # Source library
-source ./src/lib/global_variables.sh            && \
-source ./src/lib/check_config.sh                && \
-source ./src/lib/global_functions.sh            && \
-source ./src/actions/add/add_folder.sh          && \
-source ./src/actions/remove/remove_folder.sh    && \
-source ./src/actions/install/install_folder.sh  \
+source ./src/lib/global_variables.sh                && \
+source ./src/lib/check_config.sh                    && \
+source ./src/lib/global_functions.sh                && \
+source ./src/actions/add/add_folder.sh              && \
+source ./src/actions/remove/remove_folder.sh        && \
+source ./src/actions/install/install_folder.sh      && \
+source ./src/actions/uninstall/uninstall_folder.sh  \
 || {
   echo
   echo "Error getting source iac_fuga_lib.sh"
@@ -75,6 +76,19 @@ case "$1" in
     case "$2" in
       folder)
         install_folder
+      ;;
+
+    *)
+      echo "Invalid Option"
+      echo "Try ./iac_fuga --help"
+    esac	
+
+  ;;
+
+  uninstall) 
+    case "$2" in
+      folder)
+        uninstall_folder
       ;;
 
     *)

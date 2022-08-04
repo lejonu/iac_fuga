@@ -64,7 +64,7 @@ add_folder() {
   echo -n "Create group and folder ${IAC_PATH}${folderName} now? (y,n): "
   read confirm
 
-  check_confirm "$confirm" && {
+  $( [ "$confirm" == "y" ] || [ "$confirm" == "Y" ] ) && {
     groupadd "$group"
     mkdir "${IAC_PATH}${folderName}" 
     chown "$owner"."$group" "${IAC_PATH}${folderName}" 

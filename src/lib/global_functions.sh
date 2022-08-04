@@ -44,14 +44,6 @@ delete_registry() {
   # echo "The key '$1' was removed from '$2'."
 }
 
-check_confirm() {
-  if [ "$1" = "y" ] || [ "$1" = "Y" ]; then
-    return 0
-  else
-    return 1
-  fi 
-}
-
 check_user_permission(){
   [ $(id -u) = 0 ] || {
     echo "User $USER doesn't have enough permissions."
