@@ -25,9 +25,14 @@
 
     # Folders:
 
-    iac_fuga add folder         # add folders and groups
-    iac_fuga remove folder      # remove folders and groups
+    iac_fuga add folder         # add folder and groups
+    iac_fuga remove folder      # remove folder and group
     iac_fuga install folder     # install folders and groups from iac_fuga in OS
+    iac_fua uninstall folder    # uninstall folders and groups of iac_fuga from OS
+
+    # Users:
+
+    iac_fuga add user         # add user and groups
   "
   exit 0
 }
@@ -39,7 +44,8 @@ source ./src/lib/global_functions.sh                && \
 source ./src/actions/add/add_folder.sh              && \
 source ./src/actions/remove/remove_folder.sh        && \
 source ./src/actions/install/install_folder.sh      && \
-source ./src/actions/uninstall/uninstall_folder.sh  \
+source ./src/actions/uninstall/uninstall_folder.sh  && \
+source ./src/actions/add/add_user.sh                \
 || {
   echo
   echo "Error getting source iac_fuga_lib.sh"
@@ -52,6 +58,10 @@ case "$1" in
     case "$2" in
       folder)
         add_folder
+      ;;
+
+      user)
+        add_user
       ;;
 
     *)

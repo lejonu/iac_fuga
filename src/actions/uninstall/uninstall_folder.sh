@@ -1,9 +1,9 @@
 
-# remove_folder.sh
+# uninstall_folder.sh
 #
 # Requirements: iac_fuga system
 #
-# Usage: iac_fuga remove folder
+# Usage: iac_fuga uninstall folder
 #
 # Created: 2022/08/04
 #

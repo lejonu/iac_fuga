@@ -84,3 +84,7 @@ valid_permission() {
     exit 1
   }
 }
+
+encrypt_pass() {
+  echo $( openssl passwd "$1" )
+}
