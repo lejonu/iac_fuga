@@ -25,17 +25,20 @@
 
     # Folders:
 
-    iac_fuga add folder             # add folders and groups
+    iac_fuga add folder                 # add folders and groups
+    iac_fuga remove folder              # remove folders and groups
   "
   exit 0
 }
 
 # Source library
-source ./src/lib/global_variables.sh && \
-source ./src/lib/check_config.sh     && \
-source ./src/lib/global_functions.sh && \
-source ./src/actions/add/add_folder.sh  \
+source ./src/lib/global_variables.sh          && \
+source ./src/lib/check_config.sh              && \
+source ./src/lib/global_functions.sh          && \
+source ./src/actions/add/add_folder.sh        && \
+source ./src/actions/remove/remove_folder.sh  \
 || {
+  echo
   echo "Error getting source iac_fuga_lib.sh"
   echo
   exit 1
@@ -46,6 +49,14 @@ case "$1" in
     case "$2" in
       folder)
         add_folder
+      ;;
+    esac	
+  ;;
+
+  remove) 
+    case "$2" in
+      folder)
+        remove_folder
       ;;
     esac	
   ;;

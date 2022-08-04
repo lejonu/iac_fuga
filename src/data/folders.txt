@@ -1,7 +1,2 @@
 name:owner:group:permission
 teste01:root:GRP_TESTE01:750
-teste02:root:GRP_TESTE02:777
-teste03:root:GRP_TESTE03:755
-teste04:root:GRP_TESTE04:700
-teste05:root:GRP_TESTE05:777
-teste07:root:GRP_TESTE07:100
