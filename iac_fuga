@@ -32,7 +32,7 @@
 
     # Users:
 
-    iac_fuga add user         # add user and groups
+    iac_fuga add user           # add user associated to groups
   "
   exit 0
 }
@@ -45,7 +45,8 @@ source ./src/actions/add/add_folder.sh              && \
 source ./src/actions/remove/remove_folder.sh        && \
 source ./src/actions/install/install_folder.sh      && \
 source ./src/actions/uninstall/uninstall_folder.sh  && \
-source ./src/actions/add/add_user.sh                \
+source ./src/actions/add/add_user.sh                && \
+source ./src/actions/remove/remove_user.sh             \
 || {
   echo
   echo "Error getting source iac_fuga_lib.sh"
@@ -74,6 +75,10 @@ case "$1" in
     case "$2" in
       folder)
         remove_folder
+      ;;
+
+      user)
+        remove_user
       ;;
 
     *)

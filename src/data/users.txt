@@ -1,4 +1,2 @@
 login:full name:group:shell:passwd
 teste01:teste 01:GRP_TESTE01:/bin/bash :$1$5sgJvuot$7iY.b5pECuGIaaHo82KLA/
-teste02:teste 02:GRP_TESTE02:/bin/bash :Senha123
-teste03:teste 03:GRP_TESTE02:/bin/bash :$1$pUU0JUBu$5rWkq6deberP0XwG0.1Zv.
