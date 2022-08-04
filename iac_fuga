@@ -28,7 +28,8 @@
 
 # Source library
 source ./src/lib/global_variables.sh && \
-source ./src/lib/check_config.sh \
+source ./src/lib/check_config.sh     && \
+source ./src/lib/global_functions.sh    \
 || {
   echo "Error getting source iac_fuga_lib.sh"
   echo
