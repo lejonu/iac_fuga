@@ -26,6 +26,13 @@
   exit 0
 }
 
+# Source library
+source ./src/lib/global_variables.sh || {
+  echo "Error getting source iac_fuga_lib.sh"
+  echo
+  exit 1
+}
+
 case "$1" in 
 
   *)
