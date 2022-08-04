@@ -1,0 +1,5 @@
+name:owner:group:permission
+adm:root:GRP_ADM:770
+ven:root:GRP_VEN:770
+sec:root:GRP_SEC:770
+publico:root:GRP_PUBLICO:777

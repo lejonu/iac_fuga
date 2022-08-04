@@ -1,0 +1,2 @@
+login:full name:group:shell:passwd
+

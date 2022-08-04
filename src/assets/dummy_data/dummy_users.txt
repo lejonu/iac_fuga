@@ -1,0 +1,10 @@
+login:full name:group:shell:passwd
+carlos:Carlos Gomes:GRP_ADM:/bin/bash:$1$666w7.Jy$vzQKMInoPR3ICD2KEFxj1.
+maria:Maria Antonieta:GRP_ADM:/bin/bash:$1$HISUrUNr$M9V1w.UOKdRXvhkMef6Ps0
+joao:João Cabral de Melo Neto:GRP_ADM:/bin/bash:$1$n3K6TNnK$c9eIgc/nEhDfe6THZVPVz/
+debora:Débora Nascimento:GRP_VEN:/bin/bash:$1$d/8DTMR.$EyCDXrZMAKpZu08vSvVRl0
+sebastiana:Sebastiana dos Anjos:GRP_VEN:/bin/bash:$1$bdAb8i8s$I21Smietnuk8WD9TPbZN9/
+roberto:Roberto Carlos:GRP_VEN:/bin/bash:$1$1eTw/yED$vaqYCaa8ugwHwYLZbiBNS0
+josefina:Josefina Andrade:GRP_SEC:/bin/bash:$1$i/rzzYo4$fHuBezEFAe1ow8W.7IQjB1
+amanda:Amanda Diniz:GRP_SEC:/bin/bash:$1$kJYP/HyY$PVnJ5OyLhG7wh1bSPe9Pa1
+rogerio:Rogério Duarte:GRP_SEC:/bin/bash:$1$/RwTb63p$KmMGuQDsNrzGzNuPZkTqs/
