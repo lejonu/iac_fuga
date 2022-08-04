@@ -1,1 +1,35 @@
 #!/bin/bash
+#
+# iac_fuga
+#
+# Requirements: 
+#
+# Usage: iac_fuga [ -h | --help ] 
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
+[ "$1" = "-v" ] || [ "$1" = "--version" ] && {
+  echo "beta"
+  exit 0
+}
+
+[ "$1" = "-h" ] || [ "$1" = "--help" ] && {
+  echo "
+    Usage: iac_fuga ACTION... OPTION...
+  "
+  exit 0
+}
+
+case "$1" in 
+
+  *)
+    echo "Invalid Option"
+    echo "Try ./iac_fuga --help"
+
+esac
