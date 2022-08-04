@@ -31,7 +31,11 @@
 
     # Users:
     iac_fuga add user           # add user associated to groups
-    iac_fuga remove user        # remove user 
+    iac_fuga remove user        # remove user
+
+    # Files:
+    iac_fuga export             # export files from iac_system to be imported later 
+    iac_fuga import             # import files from previously exported ones 
   "
   exit 0
 }
@@ -46,7 +50,8 @@ source ./src/actions/install/install_folder.sh      && \
 source ./src/actions/uninstall/uninstall_folder.sh  && \
 source ./src/actions/add/add_user.sh                && \
 source ./src/actions/remove/remove_user.sh          && \
-source ./src/actions/import/import_files.sh             \
+source ./src/actions/import/import_files.sh         && \
+source ./src/actions/export/export_files.sh            \
 || {
   echo
   echo "Error getting source..."
@@ -104,6 +109,12 @@ case "$1" in
   import) 
 
     import_files
+     
+  ;;
+
+  export) 
+
+    export_files
      
   ;;
 
