@@ -24,7 +24,7 @@ dummy_file() {
 
 # insert a record $1 to file $2
 insert_registry() {
-  local key=$(echo "$1" | cut -d $SEP -f 1) # first field
+  local key=$( echo "$1" | cut -d $SEP -f 1 ) # first field
 
   if has_key "$key" "$2"; then
     echo "Key $key is already registered."
@@ -38,7 +38,7 @@ insert_registry() {
 
 # delete registry $1 from file $2
 delete_registry() {
-  has_key "$1" "$2" || return                  
+  $( has_key "$1" "$2" ) || return                  
   grep -i -v "^$1$SEP" "$2" > "$TEMP"            
   mv "$TEMP" "$2"
   # echo "The key '$1' was removed from '$2'."

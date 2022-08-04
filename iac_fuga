@@ -25,18 +25,20 @@
 
     # Folders:
 
-    iac_fuga add folder                 # add folders and groups
-    iac_fuga remove folder              # remove folders and groups
+    iac_fuga add folder         # add folders and groups
+    iac_fuga remove folder      # remove folders and groups
+    iac_fuga install folder     # install folders and groups from iac_fuga in OS
   "
   exit 0
 }
 
 # Source library
-source ./src/lib/global_variables.sh          && \
-source ./src/lib/check_config.sh              && \
-source ./src/lib/global_functions.sh          && \
-source ./src/actions/add/add_folder.sh        && \
-source ./src/actions/remove/remove_folder.sh  \
+source ./src/lib/global_variables.sh            && \
+source ./src/lib/check_config.sh                && \
+source ./src/lib/global_functions.sh            && \
+source ./src/actions/add/add_folder.sh          && \
+source ./src/actions/remove/remove_folder.sh    && \
+source ./src/actions/install/install_folder.sh  \
 || {
   echo
   echo "Error getting source iac_fuga_lib.sh"
@@ -50,6 +52,10 @@ case "$1" in
       folder)
         add_folder
       ;;
+
+    *)
+      echo "Invalid Option"
+      echo "Try ./iac_fuga --help"
     esac	
   ;;
 
@@ -58,7 +64,24 @@ case "$1" in
       folder)
         remove_folder
       ;;
+
+    *)
+      echo "Invalid Option"
+      echo "Try ./iac_fuga --help"
     esac	
+  ;;
+
+  install) 
+    case "$2" in
+      folder)
+        install_folder
+      ;;
+
+    *)
+      echo "Invalid Option"
+      echo "Try ./iac_fuga --help"
+    esac	
+
   ;;
 
   *)

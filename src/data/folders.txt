@@ -1,2 +1,3 @@
 name:owner:group:permission
 teste01:root:GRP_TESTE01:750
+teste02:root:GRP_TESTE02:750
