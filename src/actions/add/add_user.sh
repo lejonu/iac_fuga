@@ -1,3 +1,19 @@
+#!/bin/bash
+#
+# add_user.sh
+#
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga add user 
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
 add_user(){
   check_user_permission || {
     echo "Could not add folder and group: Permission denied. Are you root?"
@@ -41,7 +57,7 @@ add_user(){
     exit 1
   }
 
-    echo -n "Enter a password. Blank for default ${IAC_DEFAULT_PASS}: "
+  echo -n "Enter a password. Blank for default ${IAC_DEFAULT_PASS}: "
   read -s password
 
   [ "$password" ] || {

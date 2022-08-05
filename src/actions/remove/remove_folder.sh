@@ -1,4 +1,3 @@
-
 # remove_folder.sh
 #
 # Requirements: iac_fuga system

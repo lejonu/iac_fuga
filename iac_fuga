@@ -27,16 +27,15 @@
     iac_fuga add folder       # add folder and groups
     iac_fuga remove folder    # remove folder and group
   
-
     # Users:
     iac_fuga add user         # add user associated to groups
     iac_fuga remove user      # remove user
 
     # Files:
-    iac_fuga export           # export files from iac_system to be imported later 
-    iac_fuga import           # import files from previously exported ones
-    iac_fuga install          # Install iac_fuga folders, groups and users on the OS
-    iac_fuga uninstall        # uninstall iac_fuga from OS
+    iac_fuga export-files     # export files from iac_system to be imported later 
+    iac_fuga import-files     # import files from previously exported ones
+    iac_fuga install          # Install iac_fuga folders, users and groups on the OS
+    iac_fuga uninstall        # uninstall iac_fuga folders, users and groups from OS
   "
   exit 0
 }
@@ -103,11 +102,11 @@ case "$1" in
 
   ;;
 
-  import) 
+  import-files) 
     import_files
   ;;
 
-  export) 
+  export-files) 
     export_files
   ;;
 

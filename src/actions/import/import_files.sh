@@ -1,3 +1,19 @@
+#!/bin/bash
+#
+# import_files.sh
+#
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga import
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
 import_files() {
 
   check_user_permission || {
@@ -8,12 +24,12 @@ import_files() {
   echo "Importing files..."
   # cat "$EXP_FOLDERS" 
   # exit 0
-  IFS=''
-  for  i in  $( cat "$EXP_FOLDERS" | sed 1d ) 
+  sed 1d "$EXP_FOLDERS" | while IFS= read -r linha || [[ -n "$linha" ]]
   do
-    [ "$i" ] && {
-      $(! grep -q "$i" "$IAC_FOLDERS") && {
-        insert_registry "$i" "$IAC_FOLDERS"
+    [ "$linha" ] && {
+      $(! grep -q "$linha" "$IAC_FOLDERS") && {
+        insert_registry "$linha" "$IAC_FOLDERS"
+        insert_registry "$linha" "$IMPORT_LOG_FOLDERS"
       }
     }
   done
@@ -22,11 +38,12 @@ import_files() {
   echo "Folders file imported successfully!"
   echo
 
-  for  i in  $( cat "${EXP_USERS}" | sed 1d ) 
+  sed 1d "$EXP_USERS" | while IFS= read -r linha || [[ -n "$linha" ]]
   do
-     [ "$i" ] && {
-      $(! grep -q "$i" "$IAC_USERS") && {
-        insert_registry "$i" "$IAC_USERS"
+     [ "$linha" ] && {
+      $(! grep -q "$linha" "$IAC_USERS") && {
+        insert_registry "$linha" "$IAC_USERS"
+        insert_registry "$linha" "$IMPORT_LOG_USERS"
       }
     }
   done

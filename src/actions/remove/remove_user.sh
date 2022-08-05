@@ -1,3 +1,17 @@
+# remove_user.sh
+#
+# Requirements: iac_fuga system
+#
+# Usage: iac_fuga remove user
+#
+# Created: 2022/08/04
+#
+# Author: Leonardo José Nunes
+#
+# Version: beta
+#
+# License: MIT
+
 remove_user() {
   check_user_permission || {
     echo "Could not add folder and group: Permission denied. Are you root?"

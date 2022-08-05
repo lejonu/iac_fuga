@@ -67,7 +67,8 @@ check_system_user()
 {
   grep -q "^$1$SEP" "/etc/passwd"
 }
-# check if folder exists in OS
+
+# check if folder $1 exists in OS
 check_system_folder() {
   [ -d "$1" ] && {
     return 0

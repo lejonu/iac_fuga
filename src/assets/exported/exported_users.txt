@@ -1,5 +1,4 @@
 login:full name:group:shell:passwd
-teste01:teste 01:GRP_TESTE01:/bin/bash :$1$5sgJvuot$7iY.b5pECuGIaaHo82KLA/
 carlos:Carlos Gomes:GRP_ADM:/bin/bash:$1$666w7.Jy$vzQKMInoPR3ICD2KEFxj1.
 maria:Maria Antonieta:GRP_ADM:/bin/bash:$1$HISUrUNr$M9V1w.UOKdRXvhkMef6Ps0
 joao:João Cabral de Melo Neto:GRP_ADM:/bin/bash:$1$n3K6TNnK$c9eIgc/nEhDfe6THZVPVz/
@@ -9,3 +8,5 @@ roberto:Roberto Carlos:GRP_VEN:/bin/bash:$1$1eTw/yED$vaqYCaa8ugwHwYLZbiBNS0
 josefina:Josefina Andrade:GRP_SEC:/bin/bash:$1$i/rzzYo4$fHuBezEFAe1ow8W.7IQjB1
 amanda:Amanda Diniz:GRP_SEC:/bin/bash:$1$kJYP/HyY$PVnJ5OyLhG7wh1bSPe9Pa1
 rogerio:Rogério Duarte:GRP_SEC:/bin/bash:$1$/RwTb63p$KmMGuQDsNrzGzNuPZkTqs/
+teste03:teste:GRP_TESTE03:/bin/bash:$1$QSJ73uvA$Sp2J1uSt/1Puwoghhj/d40
+teste07:teste export:GRP_PUBLICO:/bin/bash:$1$MuHJpZSr$v94z6udiOdR8jQkW9L9Iu1
