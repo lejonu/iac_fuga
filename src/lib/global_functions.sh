@@ -8,7 +8,7 @@ has_key() {
 # get field $1 in file $2 with key $3 or any key 
 get_field() {
   local chave=${3:-.*}
-  grep -i "$chave" "$2" | cut -d $SEP -f $1 
+  grep -i "^$chave" "$2" | cut -d $SEP -f $1 
 }
 
 clear_file() {
@@ -60,9 +60,13 @@ check_empty() {
 }
 
 check_system_group() {
-  grep -q "$1$SEP" "/etc/group"
+  grep -q "^$1$SEP" "/etc/group"
 }
 
+check_system_user()
+{
+  grep -q "^$1$SEP" "/etc/passwd"
+}
 # check if folder exists in OS
 check_system_folder() {
   [ -d "$1" ] && {

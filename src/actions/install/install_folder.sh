@@ -21,7 +21,7 @@ install_folder() {
     exit 1
   }
 
-  for i in $( cat "$IAC_FOLDERS" | sed 1d )
+  sed 1d "$IAC_FOLDERS" | while IFS= read -r linha || [[ -n "$linha" ]]
   do
     folderName=$( echo "${i}"  | cut -d $SEP -f 1 )
     owner=$( echo "${i}"  | cut -d $SEP -f 2 )
@@ -60,5 +60,5 @@ install_folder() {
     
   done
 
-  exit 0
+  return 0
 }
