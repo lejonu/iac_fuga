@@ -47,11 +47,10 @@ source ./src/lib/check_config.sh                    && \
 source ./src/lib/global_functions.sh                && \
 source ./src/actions/add/add_folder.sh              && \
 source ./src/actions/remove/remove_folder.sh        && \
-source ./src/actions/install/install_folder.sh      && \
-source ./src/actions/uninstall/uninstall_folder.sh  && \
 source ./src/actions/add/add_user.sh                && \
 source ./src/actions/remove/remove_user.sh          && \
-source ./src/actions/install/install_user.sh        && \
+source ./src/actions/install/install.sh             && \
+source ./src/actions/uninstall/uninstall.sh         && \
 source ./src/actions/import/import_files.sh         && \
 source ./src/actions/export/export_files.sh            \
 || {
@@ -95,15 +94,12 @@ case "$1" in
   ;;
 
   install) 
-      install_folder 
-    install_user
+    install
 
-   
   ;;
 
   uninstall)     
-    # uninstall_user
-    uninstall_folder 
+    uninstall 
 
   ;;
 
