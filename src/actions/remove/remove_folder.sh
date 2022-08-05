@@ -14,7 +14,10 @@
 # License: MIT
 
 remove_folder() {
-  check_user_permission
+  check_user_permission || {
+    echo "Could not add folder and group: Permission denied. Are you root?"
+    exit 1
+  }
 
   # Show list of folders and ask one to be removed
   echo "Choose an option from the iac_fuga groups: "

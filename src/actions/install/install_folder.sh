@@ -15,6 +15,12 @@
 # Install folders and associated groups to OS
 
 install_folder() {
+
+  check_user_permission || {
+    echo "Could not add folder and group: Permission denied. Are you root?"
+    exit 1
+  }
+
   for i in $( cat "$IAC_FOLDERS" | sed 1d )
   do
     folderName=$( echo "${i}"  | cut -d $SEP -f 1 )

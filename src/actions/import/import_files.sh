@@ -1,6 +1,9 @@
 import_files() {
 
-  check_user_permission
+  check_user_permission || {
+    echo "Could not add folder and group: Permission denied. Are you root?"
+    exit 1
+  }
 
   echo "Importing files..."
   # cat "$EXP_FOLDERS" 
@@ -16,7 +19,7 @@ import_files() {
   done
 
   echo
-  echo "File $EXP_FOLDERS imported successfully!"
+  echo "Folders file imported successfully!"
   echo
 
   for  i in  $( cat "${EXP_USERS}" | sed 1d ) 
@@ -29,6 +32,6 @@ import_files() {
   done
 
   echo
-  echo "File "$IAC_USERS" imported successfully!"
+  echo "User file imported successfully!"
   echo
 }

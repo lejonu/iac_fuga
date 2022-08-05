@@ -1,5 +1,9 @@
 remove_user() {
-  check_user_permission
+  check_user_permission || {
+    echo "Could not add folder and group: Permission denied. Are you root?"
+    exit 1
+  }
+  
   # Show list of folders and ask one to be removed
   echo "iac_fuga users list:"
   echo

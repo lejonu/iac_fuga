@@ -24,18 +24,19 @@
     Usage: iac_fuga ACTION... OPTION...
 
     # Folders:
-    iac_fuga add folder         # add folder and groups
-    iac_fuga remove folder      # remove folder and group
-    iac_fuga install            # Install iac_fuga folders, groups and users on the OS
-    iac_fuga uninstall           # uninstall iac_fuga from OS
+    iac_fuga add folder       # add folder and groups
+    iac_fuga remove folder    # remove folder and group
+  
 
     # Users:
-    iac_fuga add user           # add user associated to groups
-    iac_fuga remove user        # remove user
+    iac_fuga add user         # add user associated to groups
+    iac_fuga remove user      # remove user
 
     # Files:
-    iac_fuga export             # export files from iac_system to be imported later 
-    iac_fuga import             # import files from previously exported ones 
+    iac_fuga export           # export files from iac_system to be imported later 
+    iac_fuga import           # import files from previously exported ones
+    iac_fuga install          # Install iac_fuga folders, groups and users on the OS
+    iac_fuga uninstall        # uninstall iac_fuga from OS
   "
   exit 0
 }
@@ -93,29 +94,21 @@ case "$1" in
   ;;
 
   install) 
-  
     install_folder
     install_user
-     
   ;;
 
   uninstall) 
-
     uninstall_folder
     uninstall_user
-
   ;;
 
   import) 
-
     import_files
-     
   ;;
 
   export) 
-
     export_files
-     
   ;;
 
   *)

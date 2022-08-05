@@ -1,4 +1,5 @@
 login:full name:group:shell:passwd
+teste01:teste 01:GRP_TESTE01:/bin/bash :$1$5sgJvuot$7iY.b5pECuGIaaHo82KLA/
 carlos:Carlos Gomes:GRP_ADM:/bin/bash:$1$666w7.Jy$vzQKMInoPR3ICD2KEFxj1.
 maria:Maria Antonieta:GRP_ADM:/bin/bash:$1$HISUrUNr$M9V1w.UOKdRXvhkMef6Ps0
 joao:João Cabral de Melo Neto:GRP_ADM:/bin/bash:$1$n3K6TNnK$c9eIgc/nEhDfe6THZVPVz/

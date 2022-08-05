@@ -16,7 +16,10 @@
 
 add_folder() {
 
-  check_user_permission
+  check_user_permission || {
+    echo "Could not add folder and group: Permission denied. Are you root?"
+    exit 1
+  }
 
   echo -n "Enter the name of the new directory: "
   read folderName
