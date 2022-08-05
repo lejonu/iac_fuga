@@ -4,7 +4,7 @@
 #
 # Requirements: iac_fuga system
 #
-# Usage: iac_fuga import
+# Usage: iac_fuga import-files
 #
 # Created: 2022/08/04
 #
@@ -29,7 +29,6 @@ import_files() {
     [ "$linha" ] && {
       $(! grep -q "$linha" "$IAC_FOLDERS") && {
         insert_registry "$linha" "$IAC_FOLDERS"
-        insert_registry "$linha" "$IMPORT_LOG_FOLDERS"
       }
     }
   done
@@ -43,7 +42,6 @@ import_files() {
      [ "$linha" ] && {
       $(! grep -q "$linha" "$IAC_USERS") && {
         insert_registry "$linha" "$IAC_USERS"
-        insert_registry "$linha" "$IMPORT_LOG_USERS"
       }
     }
   done
