@@ -84,7 +84,8 @@ uppercase() {
 }
 
 valid_permission() {
-  (! [[ "$1" =~ ^[0-9]+$ ]] || ! (("$1" >= 0 && "$1" <= 777))) && {
+  (! [[ "$1" =~ ^[0-7]{3}$ ]] ) && {
+    echo
     echo "Permitions must be between 000 and 777"
     exit 1
   }
